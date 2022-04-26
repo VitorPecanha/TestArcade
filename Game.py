@@ -1,8 +1,58 @@
 import arcade
+#///import pathlib This would be used to insert assets to our game, such as sounds, images etc.
+
+#* Constants and windows dimensions
+SCREEN_WIDTH = 1000
+SCREEN_HEIGHT = 650
+SCREE_TITLE = "Test Game"
+
+#* Assest path
+#///ASSETS_PATH = pathlib.Path(__file__).resolve().parent.parent / "assets"
 
 class Plataformer(arcade.Window):
-    def __init__(self):
-        pass
+    def __init__(self) -> None:
+        super.__init__(SCREEN_HEIGHT, SCREEN_WIDTH, SCREE_TITLE)
+
+        #Setup of different configs in the game
+        self.coins = None
+        self.background = None
+        self.walls = None
+        self.ladders = None
+        self.goals = None
+        self.enemies = None
+        self.player = None
+
+        #Physic engine
+        self.physics_engine = None
+
+        #Score
+        self.score = 0
+
+        #Level
+        self.level = 1
+
+        #Assets parts
+        """
+        This part will be used when we have the game assets
+        # Load up our sounds here
+
+        self.coin_sound = arcade.load_sound(
+
+            str(ASSETS_PATH / "sounds" / "coin.wav")
+
+        )
+
+        self.jump_sound = arcade.load_sound(
+
+            str(ASSETS_PATH / "sounds" / "jump.wav")
+
+        )
+
+        self.victory_sound = arcade.load_sound(
+
+            str(ASSETS_PATH / "sounds" / "victory.wav")
+
+        )"""
 
     def setup(self):
         """Sets up the game for the current level"""
@@ -35,6 +85,7 @@ class Plataformer(arcade.Window):
         pass
 
     def on_draw(self):
+        """Draws the game"""
         pass
 
 if __name__ == "__main__":
