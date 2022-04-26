@@ -1,13 +1,12 @@
 import arcade
-#///import pathlib This would be used to insert assets to our game, such as sounds, images etc.
-
+import pathlib
 #* Constants and windows dimensions
 SCREEN_WIDTH = 900
 SCREEN_HEIGHT = 650
 SCREE_TITLE = "Test Game"
 
 #* Assest path
-#///ASSETS_PATH = pathlib.Path(__file__).resolve().parent.parent / "assets"
+ASSETS_PATH = pathlib.Path(__file__).resolve().parent.parent / "assets"
 
 class Plataformer(arcade.Window):
     def __init__(self) -> None:
@@ -32,8 +31,6 @@ class Plataformer(arcade.Window):
         self.level = 1
 
         #Assets parts
-        """
-        This part will be used when we have the game assets
         # Load up our sounds here
 
         self.coin_sound = arcade.load_sound(
@@ -52,7 +49,7 @@ class Plataformer(arcade.Window):
 
             str(ASSETS_PATH / "sounds" / "victory.wav")
 
-        )"""
+        )
 
     def setup(self):
         """Sets up the game for the current level"""
