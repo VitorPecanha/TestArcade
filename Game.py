@@ -2,7 +2,7 @@ import arcade
 #///import pathlib This would be used to insert assets to our game, such as sounds, images etc.
 
 #* Constants and windows dimensions
-SCREEN_WIDTH = 1000
+SCREEN_WIDTH = 900
 SCREEN_HEIGHT = 650
 SCREE_TITLE = "Test Game"
 
@@ -11,7 +11,7 @@ SCREE_TITLE = "Test Game"
 
 class Plataformer(arcade.Window):
     def __init__(self) -> None:
-        super.__init__(SCREEN_HEIGHT, SCREEN_WIDTH, SCREE_TITLE)
+        super().__init__(SCREEN_HEIGHT, SCREEN_WIDTH, SCREE_TITLE)
 
         #Setup of different configs in the game
         self.coins = None
