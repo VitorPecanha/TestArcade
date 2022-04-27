@@ -75,7 +75,7 @@ class Plataformer(arcade.Window):
         ladders_layer = "ladders"
 
         # Load the current game map
-        game_map = arcade.tilemap_read_tmx(str(map_path))
+        game_map = arcade.tilemap.read_tmx(str(map_path))
 
         # Load the layers
         self.background = arcade.tilemap.process_layer(
